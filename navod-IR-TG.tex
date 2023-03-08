@@ -1,0 +1,118 @@
+\documentclass[12pt]{article}
+
+\usepackage[a4paper]{geometry}
+\usepackage[absolute,overlay]{textpos}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{hyperref}
+\usepackage{adjustbox}
+\usepackage{titling}
+
+\usepackage[version=4]{mhchem}
+
+\newcommand{\subtitle}[1]{%
+	\posttitle{%
+		\par\end{center}
+	\begin{center}\large#1\end{center}
+	\vskip0.5em}%
+}
+
+\usepackage{fontspec}
+\usepackage{unicode-math}
+
+\usepackage{polyglossia}
+\setdefaultlanguage{czech}
+
+\def\uv#1{„#1“}
+
+\title{C5966 Vybrané analytické metody a techniky konzervace - cvičení}
+
+\subtitle{Infračervená spektroskopie a termická analýzy\\ \url{https://is.muni.cz/www/moravec/c5966/}}
+
+\author % (optional, for multiple authors)
+{Zdeněk Moravec, hugo@chemi.muni.cz}
+
+\date{}
+
+\begin{document}
+\maketitle
+
+\pagebreak
+
+\section{Průběh cvičení}
+
+	\textbf{Návod není nutné tisknout!}
+
+	Cvičení probíhá v laboratoři C12/112. Doba cvičení je 2--3 hodiny.
+
+	\begin{enumerate}
+	\item Krátký úvod k IR spektroskopii \textit{(A12/112)}
+	\item Spuštění spektrometrů
+	\item Změření IR spektra atmosféry, stanovení vlhkosti uvnitř přístroje
+	\item Měření IR spekter vzorků v KBr tabletách a metodou ATR
+	\item Interpretace IR spekter
+	\end{enumerate}
+
+\subsection{Protokol}
+
+Protokol zašlete na adresu hugo@chemi.muni.cz \textit{do dvou týdnů} ode dne konání cvičení. Optimálním formátem je PDF.
+
+\subsubsection{Doporučená struktura protokolu}
+
+	\begin{enumerate}
+	\item Hlavička (Jméno, datum konání cvičení)
+	\item Princip
+	\item Postup
+	\item Spektra (naměřená spektra studenti dostanou v textovém formátu)
+	\item Interpretace spekter
+	\item Závěr
+	\end{enumerate}
+
+\newpage
+\section{Infračervená spektroskopie}
+
+\subsection{Stanovení vlhkosti uvnitř IR spektrometru}
+
+
+Hodnota vlhkosti uvnitř spektrometru je důležitá, protože optika je citlivá na stopy vlhkosti. Pro stanovení vlhkosti nastavíme spektrometr následujícím způsobem:
+
+\vspace{5mm}
+\begin{tabular}{|c|l|}
+	\hline
+	Počet skenů (background) & 16 \\\hline
+	Počet skenů (vzorek) & 1 \\\hline
+	Rozlišení & 2~cm$^{-1}$ \\\hline
+\end{tabular}
+\vspace{5mm}
+
+Po změření uložíme pozadí a odečteme hodnotu maximální intenzity (I$_{\textrm{MAX}}$) a hodnotu intenzity pásu 1559~cm$^{-1}$ (I$_{1559}$). Vlhkost pak vypočítáme:
+\\
+\\
+$\textrm{M}_{\textrm{REL}} = (1 - \frac{\textrm{I}_{1559}}{\textrm{I}_{\textrm{MAX}}}) \cdot 100 \%$
+
+\begin{figure}[h]
+	\includegraphics[keepaspectratio,height=12cm]{img/moisture.png}
+\end{figure}
+
+\newpage
+
+\subsection{Měření IR spekter vzorků v suspenzi v KBr tabletách}
+	1--3~mg vzorku smícháme s cca 300~mg KBr a směs rozetřeme v~achátové třecí misce. Získaný prášek nasypeme do lisovací matrice a lisujeme pod tlakem 8--9 tun po dobu cca 1~minuty.
+
+\begin{figure}[h]
+	\includegraphics[keepaspectratio,height=15cm]{img/KBr.png}
+\end{figure}
+\newpage
+
+\subsection{Měření IR spekter vzorků metodou ATR}
+Vzorek nasypeme na krystal diamantu, přitlačíme hrotem a změříme spektrum. Vzorky není potřeba žádným způsobem upravovat.
+
+\begin{figure}[h]
+	\includegraphics[keepaspectratio,width=10cm]{img/atr.png}
+\end{figure}
+
+\subsection{Vyhodnocení}
+
+Studenti dostanou naměřená IR spektra v textovém formátu, úkolem bude vytvořit grafický záznam spektra (doporučuji využít Gnuplot) a přiřadit nejintenzivnější pásy vibracím vazeb v molekule vzorku.
+
+\end{document}
